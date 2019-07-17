@@ -33,7 +33,7 @@ spec:
         - "1"
       containers:
       - name: podinfod
-        image: stefanprodan/podinfo:1.3.2
+        image: stefanprodan/podinfo:1.6.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9898
@@ -47,7 +47,7 @@ spec:
         - --random-error=false
         env:
         - name: PODINFO_UI_COLOR
-          value: green
+          value: blue
         livenessProbe:
           httpGet:
             path: /healthz
