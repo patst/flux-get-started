@@ -24,6 +24,12 @@ spec:
         - name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
           value: mydomain.example.com
 
+        - name: "app.secret"
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: keyString
+
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
